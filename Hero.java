@@ -10,6 +10,8 @@ public class Hero extends Mover {
     private final double gravity;
     private final double acc;
     private final double drag;
+    boolean inAir;
+    
 
     public Hero() {
         super();
@@ -30,22 +32,22 @@ public class Hero extends Mover {
         }
         applyVelocity();
 
-        for (Actor enemy : getIntersectingObjects(Enemy.class)) {
-            if (enemy != null) {
-                getWorld().removeObject(this);
-                break;
-            }
-        }
+       
+        
     }
 
     public void handleInput() {
-        if (Greenfoot.isKeyDown("w")) {
-            velocityY = -9;
+        if (Greenfoot.isKeyDown("up")) {
+            for(Actor Hero: getIntersectingObjects(Tile.class))
+            {
+            velocityY = -15;
+            inAir=true;
+           
         }
-
-        if (Greenfoot.isKeyDown("a")) {
+    }
+        if (Greenfoot.isKeyDown("left")) {
             velocityX = -5;
-        } else if (Greenfoot.isKeyDown("d")) {
+        } else if (Greenfoot.isKeyDown("right")) {
             velocityX = 5;
         }
     }
@@ -57,4 +59,7 @@ public class Hero extends Mover {
     public int getHeight() {
         return getImage().getHeight();
     }
+    
+    
+
 }
