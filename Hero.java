@@ -11,6 +11,10 @@ public class Hero extends Mover {
     private final double acc;
     private final double drag;
     boolean inAir;
+    boolean checkpoint;
+    int x = 92;
+    int y = 100;
+    
     
 
     public Hero() {
@@ -31,6 +35,17 @@ public class Hero extends Mover {
             velocityY = gravity;
         }
         applyVelocity();
+        handleInput();
+        spikes();
+        checkpoint1();
+        lava();
+        tile();
+        
+        
+        
+        
+        
+        
 
        
         
@@ -60,6 +75,46 @@ public class Hero extends Mover {
         return getImage().getHeight();
     }
     
+    public void lava()
+    {
+        if(isTouching(lavaTile.class))
+        {
+            
+            setLocation(x,y);
+        }
+    }
     
-
+    public void tile()
+    {
+      if(isTouching(DoorTile.class))
+      {
+          Greenfoot.setWorld(new World2());
+    
+        }
+    }
+   public void checkpoint1(){
+    if(isTouching(Checkpoint.class))
+        {
+            x=getX();
+            y=getY();
+            
+            
+        }
+    
+        
+    }
+    public void spikes()
+    {
+        if(isTouching(spikesTile.class))
+        {
+            
+            setLocation(x, y);
+    }
 }
+  
+    
+    
+ 
+    
+}
+
