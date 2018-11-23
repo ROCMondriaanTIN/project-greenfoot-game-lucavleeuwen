@@ -167,8 +167,8 @@ case 37:
     tile.isSolid = true;
     break;
 case 38:
-    tile = new Tile("brickBrown.png", TileEngine.TILE_WIDTH, TileEngine.TILE_HEIGHT);
-    tile.isSolid = true;
+    tile = new Tile("cactus.png", TileEngine.TILE_WIDTH, TileEngine.TILE_HEIGHT);
+    tile.isSolid = false;
     break;
 case 39:
     tile = new Tile("brickGrey.png", TileEngine.TILE_WIDTH, TileEngine.TILE_HEIGHT);

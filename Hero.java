@@ -10,6 +10,7 @@ public class Hero extends Mover {
     private final double gravity;
     private final double acc;
     private final double drag;
+    public int frame=0;
     boolean inAir;
     boolean checkpoint;
     int x = 92;
@@ -51,6 +52,9 @@ public class Hero extends Mover {
         
     }
 
+
+    
+
     public void handleInput() {
         if (Greenfoot.isKeyDown("up")) {
             for(Actor Hero: getIntersectingObjects(Tile.class))
@@ -64,6 +68,7 @@ public class Hero extends Mover {
             velocityX = -5;
         } else if (Greenfoot.isKeyDown("right")) {
             velocityX = 5;
+            ;
         }
     }
 
