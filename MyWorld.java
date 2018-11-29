@@ -71,7 +71,7 @@ public class MyWorld extends World {
         // Alle objecten toevoegen aan de wereld: camera, main karakter en mogelijke enemies
         addObject(camera, 0, 0);
         addObject(hero, 20, 800);
-        addObject(new Checkpoint(), 1300, 950);
+        addObject(new Checkpoint(), 1300, 1000);
         
         
         

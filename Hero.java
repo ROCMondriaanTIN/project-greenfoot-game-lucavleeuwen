@@ -29,7 +29,7 @@ public class Hero extends Mover {
     }
     public void animatieRight()
     {
-        if(frame == 1)
+        if(frame == 1 )
         {
             setImage("p1_walk01.png");
             frame = 2;
@@ -169,7 +169,7 @@ public class Hero extends Mover {
         
         for (Actor enemy : getIntersectingObjects(sprungTile.class)){
         if(enemy != null){
-        velocityY = -30;
+        velocityY = -25;
         setLocation(getX() +0, getY());
         
            
@@ -191,13 +191,7 @@ public class Hero extends Mover {
             {
             velocityY = -15;
             inAir=true;
-            setImage("alienGreen_jump.png");
-        
-        
-        
-        
-            
-           
+            setImage("p1_jump.png");
         } 
     }
         if (Greenfoot.isKeyDown("left")) {

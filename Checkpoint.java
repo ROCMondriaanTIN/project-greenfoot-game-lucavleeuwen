@@ -15,5 +15,6 @@ public class Checkpoint extends Mover
     public void act() 
     {
         applyVelocity();
+       
     }    
 }
