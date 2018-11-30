@@ -96,8 +96,8 @@ public class TileFactory {
 			tile.isSolid = true;
 		break;
 		case 20:
-		   tile = new Tile("flagBlue1.png", TileEngine.TILE_WIDTH, TileEngine.TILE_HEIGHT);
-			tile.isSolid = true;
+		   tile = new Checkpoint1("flagBlue1.png", TileEngine.TILE_WIDTH, TileEngine.TILE_HEIGHT);
+			tile.isSolid = false;
 		break;
 		case 21:
 		   tile = new Tile("grassCenter.png", TileEngine.TILE_WIDTH, TileEngine.TILE_HEIGHT);

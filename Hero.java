@@ -13,8 +13,8 @@ public class Hero extends Mover {
     public int frame=0;
     boolean inAir;
     boolean checkpoint;
-    int x = 92;
-    int y = 100;
+    int x = 63;
+    int y = 1033;
     private int animatieTimer = 0;
     
     
@@ -25,6 +25,7 @@ public class Hero extends Mover {
         acc = 0.6;
         drag = 0.8;
         setImage("p1.png");
+        //hello there 
         
     }
     public void animatieRight()
@@ -179,6 +180,9 @@ public class Hero extends Mover {
         
         
         }
+       
+        
+         
 }
 
 
@@ -206,6 +210,11 @@ public class Hero extends Mover {
     public int getWidth() {
         return getImage().getWidth();
     }
+public String positie(){
+String k = "X"+getX()+" "+"Y"+getY();
+return k ;
+
+}
 
     public int getHeight() {
         return getImage().getHeight();
@@ -229,21 +238,18 @@ public class Hero extends Mover {
         }
     }
    public void checkpoint1(){
-    if(isTouching(Checkpoint.class))
+    if(isTouching(Checkpoint1.class))
         {
             x=getX();
             y=getY();
             
             
         }
+        
     
         
     }
-    
-    
-        
-    
-       
+
     public void spikes()
     {
         if(isTouching(spikesTile.class))

@@ -67,13 +67,13 @@ public class DemoHero extends Mover {
 
     public void handleInput() {
         if (Greenfoot.isKeyDown("w")) {
-            velocityY = -20;
+            velocityY = -12;
         }
 
         if (Greenfoot.isKeyDown("a")) {
-            velocityX = -2;
+            velocityX = -5;
         } else if (Greenfoot.isKeyDown("d")) {
-            velocityX = 2;
+            velocityX = 5;
         }
     }
 
