@@ -66,6 +66,8 @@ public class MyWorld extends World {
         // moet de klasse Mover extenden voor de camera om te werken
         Hero hero = new Hero();
         Enemy enemy = new Enemy();
+        BadGuy bk= new BadGuy();
+        
 
         // Laat de camera een object volgen. Die moet een Mover instatie zijn of een extentie hiervan.
         camera.follow(hero);
@@ -74,7 +76,7 @@ public class MyWorld extends World {
         addObject(camera, 0, 0);
         addObject(hero, 63, 1033);
         addObject(enemy, 200, 800);
-        
+        addObject(bk, 175, 913);
         
         
         // Force act zodat de camera op de juist plek staat.

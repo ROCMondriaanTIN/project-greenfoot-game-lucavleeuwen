@@ -13,10 +13,13 @@ public class Hero extends Mover {
     public int frame=0;
     boolean inAir;
     boolean checkpoint;
+    boolean dood;
     int x = 63;
     int y = 1033;
     private int animatieTimer = 0;
     
+        
+    Scoreboard sb;
     
 
     public Hero() {
@@ -153,6 +156,11 @@ public class Hero extends Mover {
     
     @Override
     public void act() {
+        if(sb ==null){
+        sb = new Scoreboard();
+        getWorld().addObject(sb,-10,-10);
+        }
+        
         handleInput();
         
         velocityX *= drag;
@@ -166,7 +174,7 @@ public class Hero extends Mover {
         checkpoint1();
         lava();
         tile();
-       
+        slechterik();
         
         for (Actor enemy : getIntersectingObjects(sprungTile.class)){
         if(enemy != null){
@@ -224,7 +232,7 @@ return k ;
     {
         if(isTouching(lavaTile.class))
         {
-            
+            sb.HartjeEraf();
             setLocation(x,y);
         }
     }
@@ -245,7 +253,8 @@ return k ;
             
             
         }
-        
+       
+      
     
         
     }
@@ -254,14 +263,32 @@ return k ;
     {
         if(isTouching(spikesTile.class))
         {
-            
+            sb.HartjeEraf();
+        
             setLocation(x, y);
     }
 }
   
+    public void slechterik()
+    {
+        if(isTouching(BadGuy.class))
+        {
+         removeTouching(BadGuy.class);
+     
+         sb.HartjeEraf();
+        }
+        
+        
+        
+        
+    }
     
-    
+        
+        
+        
+        
+    }
  
     
-}
+
 
