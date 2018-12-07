@@ -727,6 +727,22 @@ public class TileFactory {
 	    tile = new Tile("snowRight.png", TileEngine.TILE_WIDTH, TileEngine.TILE_HEIGHT);
 			tile.isSolid = true;
 		break;
+		case 181:
+	    tile = new Tile("doorClosed_mid.png", TileEngine.TILE_WIDTH, TileEngine.TILE_HEIGHT);
+			tile.isSolid =false;
+		break;
+		case 182:
+	    tile = new Tile("doorClosed_top.png", TileEngine.TILE_WIDTH, TileEngine.TILE_HEIGHT);
+			tile.isSolid = false;
+		break;
+		case 183:
+	    tile = new Tile("doorClosed_top.png", TileEngine.TILE_WIDTH, TileEngine.TILE_HEIGHT);
+			tile.isSolid = false;
+		break;
+		case 184:
+	    tile = new Tile("doorClosed_mid.png", TileEngine.TILE_WIDTH, TileEngine.TILE_HEIGHT);
+			tile.isSolid =false;
+		break;
 
 
     

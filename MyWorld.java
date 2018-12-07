@@ -16,6 +16,7 @@ public class MyWorld extends World {
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(1000, 800, 1, false);
         this.setBackground("bg.png");
+      
         
 
         int[][] map = {
@@ -75,8 +76,8 @@ public class MyWorld extends World {
         // Alle objecten toevoegen aan de wereld: camera, main karakter en mogelijke enemies
         addObject(camera, 0, 0);
         addObject(hero, 63, 1033);
-        addObject(enemy, 200, 800);
-        addObject(bk, 175, 913);
+        addObject(enemy, 4120,673);
+        addObject(bk, 202, 913);
         
         
         // Force act zodat de camera op de juist plek staat.

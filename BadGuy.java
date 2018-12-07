@@ -24,8 +24,10 @@ public class BadGuy extends Mover {
         int b=0;
         boolean ready=false;
         up(); 
-        setImage("fly.png");
-        this.getImage().scale(90,90);
+        setImage("flappybird.png");
+        this.getImage().scale(50,50);
+        
+       
 
        
        

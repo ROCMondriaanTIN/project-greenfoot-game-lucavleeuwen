@@ -17,6 +17,8 @@ public class Hero extends Mover {
     int x = 63;
     int y = 1033;
     private int animatieTimer = 0;
+    int timer= 0;
+    boolean invisible;
     
         
     Scoreboard sb;
@@ -175,6 +177,9 @@ public class Hero extends Mover {
         lava();
         tile();
         slechterik();
+        wesp();
+        resetTijd();
+        
         
         for (Actor enemy : getIntersectingObjects(sprungTile.class)){
         if(enemy != null){
@@ -275,7 +280,7 @@ return k ;
         {
          removeTouching(BadGuy.class);
      
-         sb.HartjeEraf();
+         
         }
         
         
@@ -283,11 +288,35 @@ return k ;
         
     }
     
-        
-        
-        
-        
+    
+    
+    
+    
+    public void wesp()
+    {
+    if (isTouching(Enemy.class)&&timer==0)
+    {
+    timer+=4;
+    setImage("alienGreen_hit.png");
+    this.getImage().scale(72,97);
+    velocityX = -80;     
+    sb.HartjeEraf();  
+    
     }
+
+    }
+        public void resetTijd(){
+        if (isTouching(Tile.class)&&timer>=1)
+    {
+    timer--;
+    
+    
+    }
+        
+        
+}
+}
+    
  
     
 
