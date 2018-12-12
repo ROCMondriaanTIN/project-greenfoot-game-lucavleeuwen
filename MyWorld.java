@@ -14,8 +14,8 @@ public class MyWorld extends World {
      */
     public MyWorld() {
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(1000, 800, 1, false);
-        this.setBackground("bg.png");
+        super(1200, 680, 1, false);
+        this.setBackground("bg11.png");
       
         
 
@@ -78,6 +78,7 @@ public class MyWorld extends World {
         addObject(hero, 63, 1033);
         addObject(enemy, 4120,673);
         addObject(bk, 202, 913);
+        showText("Level 1", 100, 120);
         
         
         // Force act zodat de camera op de juist plek staat.

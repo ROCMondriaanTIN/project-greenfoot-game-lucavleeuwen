@@ -56,7 +56,7 @@ public class Scoreboard extends Actor
         if(leven==0)
         {
             
-            Greenfoot.setWorld(new startscherm());
+            Greenfoot.setWorld(new Gameover());
         }
         
         
