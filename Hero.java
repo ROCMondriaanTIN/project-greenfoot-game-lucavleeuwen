@@ -14,6 +14,7 @@ public class Hero extends Mover {
     boolean inAir;
     boolean checkpoint;
     boolean dood;
+    boolean key;
     int x = 63;
     int y = 1033;
     private int animatieTimer = 0;
@@ -161,6 +162,7 @@ public class Hero extends Mover {
         if(sb ==null){
         sb = new Scoreboard();
         getWorld().addObject(sb,-10,-10);
+        
         }
         
         handleInput();
@@ -179,6 +181,9 @@ public class Hero extends Mover {
         slechterik();
         wesp();
         resetTijd();
+        doortile();
+        key();
+         doortile3();
         
         
         for (Actor enemy : getIntersectingObjects(sprungTile.class)){
@@ -250,6 +255,14 @@ return k ;
     
         }
     }
+    public void doortile()
+    {
+      if(isTouching(doorTop2.class))
+      {
+          Greenfoot.setWorld(new World3());
+    
+        }
+    }
    public void checkpoint1(){
     if(isTouching(Checkpoint1.class))
         {
@@ -263,6 +276,14 @@ return k ;
     
         
     }
+    public void doortile3()
+    {
+      if(isTouching(doorMid.class)&& key==true)
+      {
+          Greenfoot.setWorld(new Victory());
+    
+        }
+    }
 
     public void spikes()
     {
@@ -271,6 +292,7 @@ return k ;
             sb.HartjeEraf();
         
             setLocation(x, y);
+            
     }
 }
   
@@ -288,6 +310,19 @@ return k ;
         
     }
     
+     public boolean key()
+    {
+        
+        
+            if(isTouching(Key.class))
+            {
+                removeTouching(Key.class);
+                key= true;
+                
+            }
+            return key;
+        }
+        
     
     
     

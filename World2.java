@@ -77,6 +77,8 @@ public class World2 extends World {
         addObject(camera, 0, 0);
         addObject(hero, 20, 1200);
         addObject(bk, 197, 1213);
+        showText("Level 2", 100, 120);
+        
         
         
         
